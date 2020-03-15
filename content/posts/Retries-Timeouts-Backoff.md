@@ -1,6 +1,5 @@
 ---
 title: "Retries, Timeouts and Backoff"
-description: "Clojure Protocols - Definition, implementation, extension, reification"
 tags: ["System Design"]
 date: 2019-04-16 14:02:18 -0700
 keywords: ["retries", "timeouts", "backoff", "distributed systems", "clojure"]
