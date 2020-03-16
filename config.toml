@@ -38,7 +38,7 @@ paginate = 10
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
-    copyright = "Blog by Namrata Chaudhary :: Powered by Hugo :: Theme made by [panr](https://twitter.com/panr)"
+    copyright = "Blog by Namrata Chaudhary :: Powered by Hugo :: Theme made by panr"
 
     [languages.en.params.logo]
       logoText = "__namc"
