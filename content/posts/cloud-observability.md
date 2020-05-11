@@ -3,6 +3,7 @@ title: "Observability Family in cloud Infrastructure"
 tags: [Devops]
 date: 2020-05-11 16:25:12 +0200
 keywords: ["cloud", "kubernetes", "monitoring", "logging"]
+tldr: (An introduction to observability in Cloud Infrastructure and how to get started with basic set of tools. Explore Prometheus, Fluentd, Loki ..)
 ---
 
 ## Terminologies in Observability Ecosystem

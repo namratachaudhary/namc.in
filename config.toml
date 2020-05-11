@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-theme = "terminal"
+theme = "bare"
 paginate = 10
 
 [params]
@@ -38,7 +38,7 @@ paginate = 10
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
-    copyright = "Blog by Namrata Chaudhary :: Powered by Hugo :: Theme made by panr"
+    copyright = "Blog by Namrata Chaudhary"
 
     [languages.en.params.logo]
       logoText = "__namc"
