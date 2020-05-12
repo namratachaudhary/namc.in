@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-theme = "terminal"
+theme = "bare"
 paginate = 10
 
 [params]
@@ -8,7 +8,7 @@ paginate = 10
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "blue"
+  themeColor = "pink"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 0
@@ -21,6 +21,7 @@ paginate = 10
 
   # center theme with default width
   centerTheme = true
+  
 
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
@@ -43,3 +44,8 @@ paginate = 10
     [languages.en.params.logo]
       logoText = "__namc"
       logoHomeLink = "/"
+      
+     
+[[params.soicial]]
+icon = "github"
+url = "https://github.com/namratachaudhary/"
