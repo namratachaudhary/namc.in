@@ -1,0 +1,64 @@
+<!doctype html><html lang=en><head><title>Structured Clojure: Protocols :: __namc</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=description content="Protocols in clojure are a way to define functions that operate in different ways on different types. As someone mentioned, Clojure protocols help in solving the expression problem.
+Expression Problem Your program is a combination of a datatype and operations over it.
+Expression problem calls for an implementation of the program such that —
+  new functionalities and data-structures can be added that play well with existing functionality
+  the above is done whilst maintaining type safety; i."><meta name=keywords content="protocols,clojure"><meta name=robots content="noodp"><link rel=canonical href=/posts/protocols/><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/pink.css><link rel=apple-touch-icon-precomposed sizes=144x144 href=/img/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=/img/favicon/pink.png><meta name=twitter:card content="summary"><meta name=twitter:title content="Structured Clojure: Protocols :: __namc —"><meta name=twitter:description content="Protocols in clojure are a way to define functions that operate in different ways on different types. As someone mentioned, Clojure protocols help in solving the expression problem.
+Expression Problem Your program is a combination of a datatype and operations over it.
+Expression problem calls for an implementation of the program such that —
+  new functionalities and data-structures can be added that play well with existing functionality
+  the above is done whilst maintaining type safety; i."><meta name=twitter:site content="/"><meta name=twitter:creator content><meta name=twitter:image content><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="Structured Clojure: Protocols :: __namc —"><meta property="og:description" content="Protocols in clojure are a way to define functions that operate in different ways on different types. As someone mentioned, Clojure protocols help in solving the expression problem.
+Expression Problem Your program is a combination of a datatype and operations over it.
+Expression problem calls for an implementation of the program such that —
+  new functionalities and data-structures can be added that play well with existing functionality
+  the above is done whilst maintaining type safety; i."><meta property="og:url" content="/posts/protocols/"><meta property="og:site_name" content="Structured Clojure: Protocols"><meta property="og:image" content><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:published_time" content="2018-01-04 10:20:20 +0530 +0530"></head><body><div class="container center headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo>__namc</div></a></div><div class=menu-trigger>menu</div></div></header><div class=content><div class=post><h1 class=post-title><a href=/posts/protocols/>Structured Clojure: Protocols</a></h1><div class=post-meta><span class=post-date>January 04, 2018</span></div><span class=post-tags>#<a href=/tags/clojure/>Clojure</a>&nbsp;</span><div class=post-content><div><p>Protocols in clojure are a way to define functions that operate in different ways on different types. As someone <a href=https://stackoverflow.com/questions/4509782/simple-explanation-of-clojure-protocols#4513556>mentioned</a>, Clojure protocols help in solving the expression problem.</p><h3 id=expression-problem>Expression Problem<a href=#expression-problem class=hanchor arialabel=Anchor>&#8983;</a></h3><p>Your program is a combination of a datatype and operations over it.</p><p>Expression problem calls for an implementation of the program such that —</p><ul><li><p>new functionalities and data-structures can be added that play well with existing functionality</p></li><li><p>the above is done whilst maintaining type safety; i.e. without recompiling old modules, and without casts/runtime type checks.</p></li></ul><p>For languages like Javascript or Clojure, even if you cannot statically check type-safety, you would still expect that level of consistency. Although, it is easy to add new procedures and functions, but it is relatively tougher to add new data types , esp where switch , pattern-matching (case , cond) etc are involved. You might have to modify your code to accommodate these changes.</p><p>So we make use of Protocols in Clojure (Implicits in Scala, Typeclasses in Haskell, Interface in Java) to solve the Expression Problem</p><p>—-</p><p>Rough idea of what follows
+We’re going to define a bunch of protocols and geometrical shapes to demonstrate how protocols work, and are defined. Then we will try to extend and reify them.</p><p>&ndash;</p><h3 id=definition>Definition<a href=#definition class=hanchor arialabel=Anchor>&#8983;</a></h3><p>Since we’re talking about geometrical shapes, let’s assume they are closed, and have an area. So that becomes a protocol.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#66d9ef>defprotocol </span>Name
+        <span style=color:#e6db74>&#34;This interface states `name` method should be implemented&#34;</span>
+        (name [shape] <span style=color:#e6db74>&#34;name of the shape&#34;</span>))
+
+user&gt; (<span style=color:#66d9ef>defprotocol </span>Area
+        (<span style=color:#a6e22e>area</span> [shape] <span style=color:#e6db74>&#34;calculates area&#34;</span>))
+</code></pre></div><p>Now we define an immutable persistent maps, which will implement the protocol.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#66d9ef>defrecord </span>Square [size])
+user&gt; (<span style=color:#66d9ef>defrecord </span>Rectangle [a b])
+</code></pre></div><h3 id=implementation>Implementation<a href=#implementation class=hanchor arialabel=Anchor>&#8983;</a></h3><p>We have defined protocols, and records on which those protocols will be implemented. However, we need to define how those protocols shall be defined for respective records.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#a6e22e>extend-type</span> Square
+        Name                         <span style=color:#75715e>; enforces the protocol Shape</span>
+        (name [shape]                <span style=color:#75715e>; implements `name` associated</span>
+          <span style=color:#e6db74>&#34;Square&#34;</span>)
+        Area                         <span style=color:#75715e>; enforces the protocol Area</span>
+        (<span style=color:#a6e22e>area</span> [shape]                <span style=color:#75715e>; implements `area` associated</span>
+        (<span style=color:#a6e22e>Math/pow</span> (<span style=color:#e6db74>:side</span> shape) <span style=color:#ae81ff>2</span>)))
+</code></pre></div><p>Let’s extend the protocols to other record.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#a6e22e>extend-type</span> Rectangle
+        Name
+        (name [shape]
+          <span style=color:#e6db74>&#34;Rectangle&#34;</span>)
+        Area
+        (<span style=color:#a6e22e>area</span> [shape]
+        (* (<span style=color:#e6db74>:a</span> shape) (<span style=color:#e6db74>:b</span> shape))))
+</code></pre></div><p>As you can see, we are not trying to change the values of the <code>map</code> . In fact we are using the existing properties to define how the protocol should be implemented, since <code>area</code> and <code>shape</code> differs for each record.</p><h3 id=extension>Extension<a href=#extension class=hanchor arialabel=Anchor>&#8983;</a></h3><p>The purpose of extending a protocol is to provide several implementations of the same protocol all at once. A protocol can be extended using another protocol.</p><p>Let’s define another protocol for the <code>shapes</code>, but there is a constraint. We need to extend the protocol such that this new protocol does not alter the existing code. Anyway we cannot change the definition of <code>defrecords</code> (they’re immutable).</p><p>So is this possible? Yes. Let’s define another property for the shape, <code>Perimeter</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#66d9ef>defprotocol </span>Perimeter
+        <span style=color:#e6db74>&#34;Returns the perimeter of the shape&#34;</span>
+        (<span style=color:#a6e22e>perimeter</span> [shape] <span style=color:#e6db74>&#34;perimeter of the shape&#34;</span>))
+
+user&gt; (<span style=color:#a6e22e>extend-protocol</span> Perimeter
+        Square
+          (<span style=color:#a6e22e>perimeter</span> [shape] (* (<span style=color:#e6db74>:side</span> shape) <span style=color:#ae81ff>4</span>))
+        Rectangle
+          (<span style=color:#a6e22e>perimeter</span> [shape] (* (+ (<span style=color:#e6db74>:a</span> shape) (<span style=color:#e6db74>:b</span> shape)) <span style=color:#ae81ff>2</span>)))
+</code></pre></div><p>Great!</p><p>But what if we have a new shape?</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#66d9ef>defrecord </span>Triangle [a b c])
+</code></pre></div><p>Can we extend our protocols to the new record without changing the existing code? Sure, let’s try — </p><p>(FYI we did this above)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>user&gt; (<span style=color:#a6e22e>extend-type</span> Triangle
+        Name
+        (name [shape]
+          <span style=color:#e6db74>&#34;Triangle&#34;</span>)
+        Area
+        (<span style=color:#a6e22e>area</span> [{<span style=color:#e6db74>:keys</span> [a b c]}]                <span style=color:#75715e>; this can be sketchy</span>
+        (<span style=color:#66d9ef>let </span>[s (/ (+ a b c)) <span style=color:#ae81ff>2</span>]               <span style=color:#75715e>; Heron&#39;s formula</span>
+          (<span style=color:#a6e22e>Math/sqrt</span> (* s (- s a) (- s b) (- s c))))))
+</code></pre></div><h3 id=reification>Reification<a href=#reification class=hanchor arialabel=Anchor>&#8983;</a></h3><p>reify is for the case where you want to create an anonymous implementation of a protocol, which is useful for taking advantage of local context e.g. creating local overrides.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure><span style=color:#75715e>;;; &#39;reduce-unit-area&#39; is the function returing a &#39;reify&#39; of area.</span>
+<span style=color:#75715e>;;; This is when someone computes an area, the area of some shapes</span>
+<span style=color:#75715e>;;; is reduced by 1 unit.</span>
+user&gt; (<span style=color:#66d9ef>defn </span>reduce-unit-area []
+        (<span style=color:#a6e22e>reify</span> Area
+          (<span style=color:#a6e22e>area</span> [_]
+            (- <span style=color:#ae81ff>1</span> (<span style=color:#a6e22e>area</span> shape)))))
+</code></pre></div><p>You can try this code in REPL and see the results for yourself.</p></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button previous"><a href=/posts/lazy-seq/><span class=button__icon>←</span>
+<span class=button__text>lazy-seq - Lazy Sequences in Clojure</span></a></span>
+<span class="button next"><a href=/posts/atoms/><span class=button__text>Clojure - Atoms</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class="copyright copyright--user"><span>Blog by Namrata Chaudhary</span></div></div></footer><script src=/assets/main.js></script><script src=/assets/prism.js></script></div></body></html>
