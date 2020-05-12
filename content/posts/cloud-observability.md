@@ -7,7 +7,7 @@ tldr: (An introduction to observability in Cloud Infrastructure and how to get s
 ---
 
 This blog post is divided in two parts - 
-1. [Understanding the terminlogogies in Observability Ecosystem and corresponding tools](Terminologies in Observability Ecosystem)
+1. [Understanding the terminlogogies in Observability Ecosystem and corresponding tools](#Terminologies in Observability Ecosystem)
 2. [How you can use some bare-minimum tooling to improve observability in your kubernetes cluster](https://namc.in/posts/cloud-observability-ii/)
 
 ## Terminologies in Observability Ecosystem
