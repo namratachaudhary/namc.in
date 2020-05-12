@@ -1,10 +1,12 @@
 ---
-title: "Observability Cloud Infrastructure - Using the right tools"
+title: "Using the right tools for an Observablble Kubernetes Cluster"
 tags: [Devops]
 date: 2020-05-12 06:25:12 +0200
 keywords: ["cloud", "kubernetes", "monitoring", "logging"]
 tldr: (An introduction to observability in Cloud Infrastructure and how to get started with basic set of tools. Explore Prometheus, Fluentd, Loki ..)
 ---
+
+In the [last part](https://namc.in/posts/cloud-observability/), we saw commonly used terms and tools in CNCF landscape for making your Cloud Infrastructure observable. In this section we will read about how we can use those concepts and handful of tools to get started. 
 
 ## Creating a very basic and bare-minimum observable infrastructure
 
