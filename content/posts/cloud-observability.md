@@ -7,7 +7,7 @@ tldr: (An introduction to observability in Cloud Infrastructure and how to get s
 ---
 
 This blog post is divided in two parts - 
-1. [Understanding the terminlogogies in Observability Ecosystem and corresponding tools](#terminologies-in-observability-ecosystem)
+1. [Understanding the terminlogies in Observability Ecosystem and corresponding tools](#terminologies-in-observability-ecosystem)
 2. [How you can use some bare-minimum tooling to improve observability in your kubernetes cluster](https://namc.in/posts/cloud-observability-ii/)
 
 ## Terminologies in Observability Ecosystem
@@ -44,10 +44,10 @@ Let’s begin with understanding some fundamental concepts in the universe of ob
 ### Logging
 
 -   Implemented on application level, it refers to responsible behaviour of the developer and application to make a note of all necessary and relevant information in a workflow.
--   Implemented on system level, it an indication of all the events triggered by the system when a workflow is executed.
+-   Implemented on system level, it is an indication of all the events triggered by the system when a workflow is executed.
 -   There are multiple log levels - debug, error, fatal, info. They should be enforced in the business logic (application code) to improve visibility within the application.
 -   Logs are very useful to debug applications and services without stopping them and determining if the workflow is broken somewhere.
--   Logs are often routed to ELK stack, sentry.io etc ; combined across services with a unique context ID and an query language interface is provided to get logs pertaining to a particular function call or context ID.
+-   Logs are often routed to ELK stack, sentry.io etc ; combined across services with a unique context ID and a query language interface is provided to get logs pertaining to a particular function call or context ID.
 -   Sample usage would be - logging all steps involved when an http request is initiated, i.e. the request payload as debug log, an exception or external service error as Error logs
 -   Suggested tools -
 	-   ELK stack
