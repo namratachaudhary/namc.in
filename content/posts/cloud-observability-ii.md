@@ -1,5 +1,5 @@
 ---
-title: "Using the right tools for an Observablble Kubernetes Cluster"
+title: "Using the right tools for an Observable Kubernetes Cluster"
 tags: [Devops]
 date: 2020-05-12 06:25:12 +0200
 keywords: ["cloud", "kubernetes", "monitoring", "logging"]
