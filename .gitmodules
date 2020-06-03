@@ -1,3 +1,6 @@
 [submodule "themes/bare"]
 	path = themes/bare
 	url = https://github.com/orf/bare-hugo-theme.git
+[submodule "themes/yinyang"]
+	path = themes/yinyang
+	url = git@github.com:joway/hugo-theme-yinyang.git
