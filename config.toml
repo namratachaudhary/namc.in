@@ -1,18 +1,14 @@
 baseurl = "/"
 languageCode = "en-us"
-theme = "yinyang"
-paginate = 20
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+theme = "terminal"
+paginate = 10
 
 [params]
-
-  headTitle = "__namc"
-
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
 
-  mainSections = ["posts"]
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 0
@@ -34,7 +30,21 @@ pygmentsUseClasses = true
   # it's set to `true` by default
   # oneHeadingSize = false
 
-  useHLJS = true
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "__namc"
+    subtitle = ""
+    keywords = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    copyright = "Blog by Namrata Chaudhary"
+
+    [languages.en.params.logo]
+      logoText = "__namc"
+      logoHomeLink = "/"
+      
      
 [[params.soicial]]
 icon = "github"
