@@ -37,5 +37,5 @@ pygmentsUseClasses = true
   useHLJS = true
      
 [[params.soicial]]
-icon = "github"
-url = "https://github.com/namratachaudhary/"
+name = "Github"
+link = "https://github.com/namratachaudhary"
