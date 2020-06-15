@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Namc's blog - Tech, Food, Skincare"
+title = "Namc's blog"
 theme = "yinyang"
 DefaultContentLanguage = "en"
 paginate = 20
