@@ -28,3 +28,7 @@ link = "https://github.com/namratachaudhary"
 [[params.socials]]
 name = "LinkedIn"
 link = "https://www.linkedin.com/in/namrata-c-542b8a56/"
+
+# Enable tags.
+[taxonomies]
+   tag = "tags"
