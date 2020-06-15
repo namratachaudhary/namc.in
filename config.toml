@@ -1,41 +1,30 @@
-baseurl = "/"
+baseURL = "/"
 languageCode = "en-us"
+title = "Namc's blog - Tech, Food, Skincare"
 theme = "yinyang"
+DefaultContentLanguage = "en"
 paginate = 20
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+
+[author]
+  name = "__namc"
+  homepage = "https://namc.in/"
 
 [params]
+extraHead = ''
+mainSections = ["posts"]
 
-  headTitle = "__namc"
+[[params.socials]]
+name = "RSS"
+link = "/index.xml"
 
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+[[params.socials]]
+name = "About"
+link = "https://namc.in"
 
-  mainSections = ["posts"]
-
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 0
-
-  # show selector to switch language
-  showLanguageSelector = false
-
-  # set theme to full screen width
-  fullWidthTheme = false
-
-  # center theme with default width
-  centerTheme = true
-  
-
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
-
-  # set all headings to their default size (depending on browser settings)
-  # it's set to `true` by default
-  # oneHeadingSize = false
-
-  useHLJS = true
-     
-[[params.soicial]]
+[[params.socials]]
 name = "Github"
 link = "https://github.com/namratachaudhary"
+
+[[params.socials]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/namrata-c-542b8a56/"

@@ -1,0 +1,41 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "yinyang"
+paginate = 20
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+
+  headTitle = "__namc"
+
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  mainSections = ["posts"]
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 0
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+  
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+  useHLJS = true
+     
+[[params.social]]
+name = "Github"
+link = "https://github.com/namratachaudhary"
