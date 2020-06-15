@@ -14,12 +14,8 @@ extraHead = ''
 mainSections = ["posts"]
 
 [[params.socials]]
-name = "RSS"
-link = "/index.xml"
-
-[[params.socials]]
 name = "About"
-link = "https://namc.in"
+link = "/about"
 
 [[params.socials]]
 name = "Github"
@@ -28,6 +24,10 @@ link = "https://github.com/namratachaudhary"
 [[params.socials]]
 name = "LinkedIn"
 link = "https://www.linkedin.com/in/namrata-c-542b8a56/"
+
+[[params.socials]]
+name = "RSS"
+link = "/index.xml"
 
 # Enable tags.
 [taxonomies]
