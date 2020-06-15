@@ -20,6 +20,10 @@ name = "About"
 link = "/about"
 
 [[params.socials]]
+name = "Posts"
+link = "/posts"
+
+[[params.socials]]
 name = "Github"
 link = "https://github.com/namratachaudhary"
 
