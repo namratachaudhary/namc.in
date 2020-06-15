@@ -4,6 +4,8 @@ title = "Namc's blog"
 theme = "yinyang"
 DefaultContentLanguage = "en"
 paginate = 20
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [author]
   name = "__namc"
