@@ -176,7 +176,7 @@ class ClassExample<T, a> {
 
 In Haskell `T` would have kind `*->*`, but a Java type (i.e. class) cannot have a type parameter of that kind, a higher-kinded type.
 
-Personally, I feel these concepts are better understood from the perspective of lambda calculus, parametric polymorphism with higher-rank types as System F, and higher-kinded types as System λω. Hopefully we can cover that in future. 
+Personally, I feel these concepts are better understood from the perspective of lambda calculus, parametric polymorphism with higher-rank types as System F, and higher-kinded types as System Fω using type operators λω. Hopefully we can cover that in future. 
 
 Big thanks for Stephan Boyer as I shamelessly adapted his format for Haskell. If you'd like to read his blog - please find it [here](https://www.stephanboyer.com/post/115/higher-rank-and-higher-kinded-types)
 
