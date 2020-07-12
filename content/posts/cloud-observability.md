@@ -87,6 +87,6 @@ Let’s begin with understanding some fundamental concepts in the universe of ob
 		   -   Dynatrace
 		   -   New Relic
 		   
-[In next part, we will learn how to use some of these tools to obtain a basic level of observability in your kuubernetes cluster.](https://namc.in/posts/cloud-observability-ii/)
+[In next part, we will learn how to use some of these tools to obtain a basic level of observability in your kubernetes cluster.](https://namc.in/posts/cloud-observability-ii/)
 
 Special thanks to [Srujan's blog post](https://acsrujan.net/monitoring-and-siblings/) for motivation
