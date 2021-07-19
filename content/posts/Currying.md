@@ -12,13 +12,13 @@ This post is written after I saw this tweet
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Every functional programming tutorial:<br><br>&gt; OK, we&#39;re going to talk about currying. Currying is when you break down a function tha-<br>*scrolls down*<br>&gt; const Y = f =&gt; (g =&gt; g(g))(g =&gt; f(x =&gt; g(g)(x))) <a href="https://t.co/EPHH9SG5ay">pic.twitter.com/EPHH9SG5ay</a></p>&mdash; Ben Howdle (@ben_howdle) <a href="https://twitter.com/ben_howdle/status/966358609683668992?ref_src=twsrc%5Etfw">February 21, 2018</a></blockquote>
 
-And realized that we need a simpler tutorial to understand currying, the logic behind it, the nuances and the usage.
+And realized that we need a simpler tutorial to understand currying, the logic behind it, the nuances, and the usage.
 
 We will be using Haskell for this tutorial, but this can be extended to any functional programming language.
 
 ## Higher-order functions!
 
-In mathematics, higher-order functions (HOFs) are called functionals. But to simplify it for general software engineers, HOF is simply a functions that
+In mathematics, higher-order functions (HOFs) are called functionals. But to simplify it for general software engineers, HOF is simply a function that
 
 * either takes a function as an argument
 * or returns a function as a result
@@ -30,7 +30,7 @@ A well-known higher order function is map, which performs an action on each elem
 map (\x -> 2 * x) [1, 2, 3, 4, 5] -- => [2, 4, 6, 8, 10]
 ```
 
-In usual imperative programming, functions can accept values, like integers and strings (first order functions) and and return a value of some other type.
+In usual imperative programming, functions can accept values, like integers and strings (first order functions), and return a value of some other type.
 
 Consider a function, `f` such that -
 
@@ -38,7 +38,7 @@ Consider a function, `f` such that -
 f a b c = a + b - c
 ```
 
-What if we wanted to generalize the operators in above function? That would make our operators a variable too. Right? Let's see a way to define a more generalized version of `f`, where `g` and `h` represent the operator-functions.
+What if we wanted to generalize the operators in the above function? That would make our operators a variable too. Right? Let's see a way to define a more generalized version of `f`, where `g` and `h` represent the operator-functions.
 
 ```hs
 let f g h a b c = a `g` b `h` c
@@ -59,19 +59,19 @@ let g f n = (\m -> m `f` n)
 > f 10 -- returns 20
 ```
 
-In the above example, `(\m -> m `f` n)` construct is an anonymous function of 1 argument `m` which applies `f` to `m` and `n`. And using this anonymous functions, we can define `g h 2` which is a function that accepts one argument `g` and operates `h` to it.
+In the above example, `(\m -> m `f` n)` construct is an anonymous function of 1 argument `m` which applies `f` to `m` and `n`. And using these anonymous functions, we can define `g h 2` which is a function that accepts one argument `g` and operates `h` to it.
 
-**Trivia : ** Scheme, according to Wikipedia, was the first language to introduce proper higher-order functions as first-class citizens, however the first mention dates back to Frege in "Funktion und Begriff" (1891).
+**Trivia:** Scheme, according to Wikipedia, was the first language to introduce proper higher-order functions as first-class citizens, however, the first mention dates back to Frege in "Funktion und Begriff" (1891).
 
 ## Currying
 
-Currying is a technique that transforms a function of several arguments to a function of a single argument, which returns a function of 1 argument, which returns a functions of 1 argument ... till it returns a value.
+Currying is a technique that transforms a function of several arguments to a function of a single argument, which returns a function of 1 argument, which returns a function of 1 argument ... till it returns a value.
 
 A curried function is one that returns a function as its result. A fully curried function is a one-argument function that either returns an ordinary result or returns a fully curried function.
 
 Note that a curried function is necessarily a higher-order function, since it returns a function as its result.
 
-Let's take an example, where we have a function of two args, like (+). But what if you could define the same function, by giving only one argument to it, thereby returning a function, which you could use later to add thid 1st argument, now encased in this new function, to something else.
+Let's take an example, where we have a function of two args, like (+). But what if you could define the same function, by giving only one argument to it, thereby returning a function, which you could use later to add this 1st argument, now encased in this new function, to something else.
 
 ```hs
 f n = (\m -> n + m)
@@ -93,7 +93,7 @@ function add (a) {
 add(3)(4)
 ```
 
-How could be make it more abstract? Lets define `curry` , which takes a function and an argument, such that
+How could we make it more abstract? Lets define `curry` , which takes a function and an argument, such that
 
 ```hs
 curry f n = \m -> f n m
@@ -124,11 +124,11 @@ For example, take the function `(++)` which concatenates two strings together.
 
 The type definition can be understood as, `(++)` accepts one list, and returns a function of type `[a] -> [a]`. The resultant function can accept yet another list, and we get a new list of type `[a]`.
 
-If you are familiar with other languages, you can correlate `f a b c` as Lisp's `(((f a) b) c)` or Java's `f(a, b, c)` . This makes sense as , in Haskell, the function `f` is curried by default.
+If you are familiar with other languages, you can correlate `f a b c` as Lisp's `(((f a) b) c)` or Java's `f(a, b, c)`. This makes sense as, in Haskell, the function `f` is curried by default.
 
 However, when you're analyzing types, the association is from right to left, so `[a] -> [a] -> [a]` is equivalent to `[a] -> ([a] -> [a])`, which means that when you apply an argument to the function, you get back a function of type `[a] -> [a]`.
 
-Similiary, you can analyze `map`, which accepts a function `(a -> b)` and a list `[a]` , and returns a transformed list `[b]`, such that function is mapped over all elements of `[a]`.
+Similarly, you can analyze `map`, which accepts a function `(a -> b)` and a list `[a]` , and returns a transformed list `[b]`, such that function is mapped over all elements of `[a]`.
 
 ```hs
 :t map
@@ -183,7 +183,7 @@ In place of `(+)` , you can use any binary function to define sections.
 (2elem')
 ```
 
-The point to note here is , since every function is curried by default, and accepts one argument only, so sections can be used with any function. For example ,
+The point to note here is, since every function is curried by default, and accepts one argument only, so sections can be used with any function. For example,
 
 ```hs
 let f a b c d = a + b + c
@@ -250,7 +250,7 @@ and then `myFunc 0` would reduce to a much smaller expression.
 
 ## Compositions
 
-Compositions and Application operator are very handy for writing concise and flexible code.
+Compositions and Application operators are very handy for writing concise and flexible code.
 
 * **Composition operator** `(.)` chains functions together.
 * **Application operator** `($)` applies function on the left side to the argument on the right side
@@ -279,4 +279,3 @@ f . g . h $ x + y + z   -- 4
 ```
 
 `(.)` and `($)` are different things. More can be read about that here - [Learn you a haskell ($)](http://learnyouahaskell.com/higher-order-functions#function-application)
-
