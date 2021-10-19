@@ -1,7 +1,7 @@
 ---
 title: "Homemade Cookie-box 2021"
 tags: [Baking]
-date: 2017-12-26 12:39:46 +0530
+date: 2021-10-19 12:39:46 +0530
 keywords: [Baking, Personal]
 ---
 
@@ -25,14 +25,14 @@ They're nice hand-crafted boxes and the cookies are made in a nice, clean kitche
 * I will not be able to deliver the box anywhere outside of Dublin 4.
 
 ### FAQS -
-* What is the last day for sign-up? 15 November, 2021
-* Can I send it to my mam in Canada? Sadly, no. This is Ireland-only
+* What is the last day for sign-up? **15 November, 2021**
+* Can I send it to my mam in Canada? Sadly, no. This is **Ireland-only**
 * Can I share it with my friends? Yes, that would be nice. But Ireland-only.
 * What is the shelf-life of the cookies? They last up to 4 weeks at room temp, but I'm 100% sure they will be gone within less than a week 😋
 * When will the box be shipped/ready for collection? Depending on signups, I am aiming for first/second week of December
 * Are there more people involved? Unfortunately (or fortunately?) no, its a one-woman shop and I have a lot of support from my partner, Stephen ❤️
 * Is this a business in making? Absolutely not. Its an opportunity for me to share my love for baking with people I love. This is not a retirement-plan or a business opportunity.
 
-The sign up form is here - https://forms.gle/dNqXGYLVkkdJM42V7
+**The sign up form is here - https://forms.gle/dNqXGYLVkkdJM42V7
 
 Looking forward to sending you cookies! 
