@@ -22,7 +22,7 @@ They're nice hand-crafted boxes and the cookies are made in a nice, clean kitche
   * In order to keep the running costs transparent, we are going to try and keep a running spreadsheet of the costs incurred in the process - this will be publicly available.
   * Should you choose not to contribute, it wont be held against you. You get the same cookie box with equal love, regardless :heart:
 * If you are choosing to get the box delivered, it would be preferred if you could cover the postage.
-* I will not be able to deliver the box anywhere outside of Dublin 4.
+* I will not be able to hand-deliver the box anywhere outside of Dublin 4, however postal would be okay!
 
 ### FAQS -
 * What is the last day for sign-up? **15 November, 2021**
