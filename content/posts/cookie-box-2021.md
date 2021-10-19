@@ -18,7 +18,7 @@ They're nice hand-crafted boxes and the cookies are made in a nice, clean kitche
 * Ideally I would prefer it to be one-box per household, but if I am left with extras, they can be given away on first-come-first-serve basis.
 
 ### Payments -
-* The cookie-box itself is free, but should you feel like contributing to the cost of ingredients, I'd be very happy to share a link for the same.
+* The cookie-box itself is free, but should you feel like contributing to the cost of ingredients, [**you can use this link**](https://www.buymeacoffee.com/namc)
   * In order to keep the running costs transparent, we are going to try and keep a running spreadsheet of the costs incurred in the process - this will be publicly available.
   * Should you choose not to contribute, it wont be held against you. You get the same cookie box with equal love, regardless ❤️
 * If you are choosing to get the box delivered, it would be preferred if you could cover the postage.
