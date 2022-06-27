@@ -5,7 +5,7 @@ date: 2022-06-27 12:39:46 +0530
 keywords: [sustainability, cloud]
 ---
 
-In simple terms, [net zero](https://technation.io/programmes/net-zero/) refers to the balance between the amount of greenhouse gas produced and the amount removed from the atmosphere. This is easy to compute when you talk about, say organic vs inorganic materials. For technology, net zero is more than just carbon neutrality. It extends to transportation, equipment management and energy consumption, end-of-life treatment of equipment, upcycling and recycling.
+Lets talk about Ner zero. In simple terms, [net zero](https://technation.io/programmes/net-zero/) refers to the balance between the amount of greenhouse gas produced and the amount removed from the atmosphere. This is easy to compute when you talk about, say organic vs inorganic materials. For technology, net zero is more than just carbon neutrality. It extends to transportation, equipment management and energy consumption, end-of-life treatment of equipment, upcycling and recycling.
 
 Many industries have seen great innovation to provide solutions in order to achieve carbon neutrality, and some software firms like [Sweep](https://www.sweep.net/), are helping other companies reduce their carbon emissions. However, in terms of monitoring the impact of infrastructure on environment, there is still a long way to go.
 
