@@ -19,7 +19,9 @@ I believe, as a part of infrastructure design, aside from determining "requests 
 * Is it really necessary to keep a point-in-time events in a datastore permanently and indefinitely? 
 * Could this data be aggregated and purged on regular? 
 
-In my opinion, starting with "why do we need this data" and then collecting it is a better way to go about it - not the other way round.
+In my opinion, starting with "why do we need this data" and then collecting it is a better way to go about it - not the other way round. 
+
+And while we are talking about data, some peers and friends also pointed out how the standard "indefinite / unplanned" data retention can often lead to privacy, regulatory, and legal risk. With GDPR standards, we could help make data storage less carbon intensive
 
 We monitor uptimes, throughputs, network traffic, could we perhaps monitor the carbon impact of infrastructure as part of our monitoring and observability stack? 
 
