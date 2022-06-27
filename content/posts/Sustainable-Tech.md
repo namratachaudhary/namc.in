@@ -38,5 +38,7 @@ Some organisations feel managing their legacy infrastructure on-prem is better t
 
 With above in mind, perhaps migrating on-prem installation is better managed on cloud while offsetting the carbon footprint due to procurement, management and disposal for data-center and related technology. Also, carbon offset cloud providers (like GCP in some scenarios) are a good first step. Similarly, when one is opting to use a service provider, we should factor in the carbon offset of the said service, and its contribution to netzero during procurement, maintenance and end of life.
 
-This is a tough problem to solve, but just as we achieved the mindset of reliability by embedding it in our software architecture design process, we could also start being mindful about the cost of carbon. We need to take a deeper look at the carbon cost of the infrastructure we are using and further design, and do better at making it efficient AND greener. 
+This is a tough problem to solve, but just as we achieved the mindset of reliability by embedding it in our software architecture design process, we could also start being mindful about the cost of carbon, or start small by taking a look at carbon cost of one service, one datastore. 
+
+However, in conclusion, we do need to take a deeper look at the carbon cost of the infrastructure we are using and further design, and do better at making it efficient AND greener.
 
