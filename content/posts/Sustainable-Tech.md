@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on embedding sustainability in cloud computing"
 tags: [sustainability, cloud, computing]
-date: 2021-10-19 12:39:46 +0530
+date: 2022-06-27 12:39:46 +0530
 keywords: [sustainability, cloud]
 ---
 
