@@ -71,7 +71,7 @@ With above in mind, perhaps migrating on-prem installation is better managed on 
   * GCP - https://cloud.google.com/carbon-footprint
   * Cloud Carbon Footprint - http://www.cloudcarbonfootprint.org/
 
-## Section 3 - Practical questions for SREs
+## Practical questions for SREs
 
 * Rethinking how we manage data by asking “why do we need this data” and then collecting it. 
 * As a "horizontal" function that addresses the whole software lifecycle, SRE is well positioned in many organisations to bring the necessary people together to examine and act on these questions: product management, legal, product engineering, infrastructure.
