@@ -7,7 +7,7 @@ keywords: [sustainability, cloud]
 
 Climate change is an issue which affects us all, as industries and individuals. Many businesses and institutions are taking active measures to help achieve carbon neutrality, or “net zero”. However, we have a lot of work to do in software and systems engineering. SRE in particular has a part to play. The industry is increasingly working with huge data volumes, which make the sustainability of our technology choices all the more important for the overall picture. It’s crucial that we have a conversation about this. 
 
-> We always think about how we can make our applications faster, but we also need to start thinking how we can make them greener 
+> We always ask how we can make our applications faster, but never think how we can make them greener 🌳
 
 ## Carbon footprinting and what it means for SREs 
 
@@ -20,8 +20,6 @@ Many industries have seen great innovation to provide solutions in order to achi
 ### 2. 1 Rethinking data governance
 
 We store large volumes of data, run large amount of applications, in various data stores running in multi-region multi-cloud environments. We try to make internet faster, more available, more reliable. 
-
-> We always ask how we can make our applications faster, but never think how we can make them greener 🌳
 
 I believe, as a part of infrastructure design, aside from determining "requests served per second", we should start evaluating if the technology decisions made are sustainable. 
 * Do we need all the extra data we are storing? 
